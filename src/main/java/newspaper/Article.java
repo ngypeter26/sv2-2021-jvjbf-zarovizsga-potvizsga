@@ -28,9 +28,10 @@ public abstract class Article implements Comparable<Article>{
         return paragraphs;
     }
 
+
     @Override
-    public int compareTo(Article o) {
-        return o.getImportance();
+    public int compareTo(Article a) {
+        return a.getImportance() - this.getImportance();
     }
 
     @Override
